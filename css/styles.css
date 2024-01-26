@@ -24,6 +24,48 @@ header h1 {
     cursor: pointer;
 }
 
+.sp-menu #open.hide {
+    display: none;
+}
+
 main {
     padding: 0 16px;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(225, 225, 225, 0.95);
+    text-align: center;
+    padding: 64px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay #close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.overlay ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay li {
+    margin-top: 24px;
+}
+
